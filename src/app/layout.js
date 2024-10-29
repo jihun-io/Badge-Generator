@@ -1,9 +1,7 @@
 import "./globals.css";
+import { generateMetadata } from "../../utils/metadata";
 
-export const metadata = {
-  title: "배지 생성기",
-  description: "기술 스택 배지를 간단하게 만들어 보세요!",
-};
+export const metadata = generateMetadata();
 
 export default function RootLayout({ children }) {
   return (
