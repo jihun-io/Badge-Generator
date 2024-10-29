@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+export const runtime = "edge";
+
 async function getData() {
   const url = process.env.DATA;
 
