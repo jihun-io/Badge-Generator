@@ -74,8 +74,9 @@ export default function Modal({ children }) {
                   광장에서 내려놓기로 했어요.
                 </p>
                 <p className="mt-4 text-sm">
-                  요약: Oracle 법무 팀이 Simple Icons 측에 "허가를 받지 않은
-                  로고 사용"이라면서 Java 로고를 내려줄 것을 요청했습니다.{" "}
+                  요약: Oracle 법무 팀이 Simple Icons 측에 &ldquo;허가를 받지
+                  않은 로고 사용&rdquo;이라면서 Java 로고를 내려줄 것을
+                  요청했습니다.{" "}
                   <a
                     href="https://github.com/simple-icons/simple-icons/issues/7374"
                     className="whitespace-nowrap font-bold text-elf-green-600 hover:text-elf-green-800 transition-colors"
