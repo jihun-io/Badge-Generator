@@ -69,14 +69,14 @@ export default function Modal({ children }) {
                   </q>
                 </p>
                 <p>
-                  광장을 관리하는 이장은 고민에 빠졌습니다. 마법사의 말도 일리가
-                  있었기 때문이죠. 결국 이장은 슬픈 마음으로 파란 커피잔을
-                  광장에서 내려놓기로 했어요.
+                  광장을 관리하는 이장님은 고민에 빠졌습니다. 마법사의 말도
+                  일리가 있었기 때문이죠. 결국 이장님은 슬픈 마음으로 파란
+                  커피잔을 광장에서 내려놓기로 했어요.
                 </p>
                 <p className="mt-4 text-sm">
                   요약: Oracle 법무 팀이 Simple Icons 측에 &ldquo;허가를 받지
                   않은 로고 사용&rdquo;이라면서 Java 로고를 내려줄 것을
-                  요청했습니다.{" "}
+                  요청했습니다. 그러므로 Java 배지 만들기는 지원되지 않습니다.{" "}
                   <a
                     href="https://github.com/simple-icons/simple-icons/issues/7374"
                     className="whitespace-nowrap font-bold text-elf-green-600 hover:text-elf-green-800 transition-colors"
