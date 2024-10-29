@@ -1,8 +1,7 @@
 import { NextResponse } from "next/server";
 
 async function getData() {
-  const url =
-    "https://raw.githubusercontent.com/simple-icons/simple-icons/refs/heads/develop/_data/simple-icons.json";
+  const url = process.env.DATA;
 
   try {
     const res = await fetch(url);
