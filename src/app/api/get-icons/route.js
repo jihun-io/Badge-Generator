@@ -2,11 +2,13 @@ import { NextResponse } from "next/server";
 
 export const runtime = "edge";
 
-async function getData() {
-  const url = process.env.DATA;
+const runtimeConfig = {
+  url: process.env.URL,
+};
 
+async function getData() {
   try {
-    const res = await fetch(url);
+    const res = await fetch(runtimeConfig.url);
     const data = await res.json();
 
     return data;

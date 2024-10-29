@@ -1,14 +1,16 @@
 import { NextResponse } from "next/server";
-
 export const runtime = "edge";
 
-async function getData() {
-  const url = process.env.DATA;
+const runtimeConfig = {
+  url: process.env.URL,
+};
 
+async function getData() {
   try {
-    const res = await fetch(url);
+    const res = await fetch(runtimeConfig.url);
     const data = await res.json();
 
+    console.log(res);
     return data;
   } catch (err) {
     console.error("error!", err);
@@ -17,6 +19,7 @@ async function getData() {
 
 export async function GET(requests) {
   const params = new URL(requests.url);
+  console.log("fetching data...");
 
   try {
     const icons = await getData();
@@ -32,8 +35,6 @@ export async function GET(requests) {
         return NextResponse.json(data);
       } else {
         const search = params.searchParams.get("q");
-
-        // 객체를 그대로 전달하려면?
 
         const data = icons.icons
           .filter((i) => i.title.toLowerCase().startsWith(search.toLowerCase()))
