@@ -83,16 +83,14 @@ export default async function Generator() {
           li.addEventListener("click", () => {
             resultUl.removeChild(li);
             resultTag.value = resultTag.value.replace(
-              `[![${
+              `![${
                 src.title
               }](https://img.shields.io/badge/${src.title.replaceAll(
                 "-",
                 "--"
               )}-${
                 src.hex
-              }?style=for-the-badge&logo=${validation}&logoColor=white)](https://simpleicons.org/icons/${
-                src.title
-              })\n`,
+              }?style=for-the-badge&logo=${validation}&logoColor=white)\n`,
               ""
             );
           });
@@ -102,13 +100,14 @@ export default async function Generator() {
 
           resultTag.value =
             resultTag.value +
-            `[![${src.title}](https://img.shields.io/badge/${encodeURIComponent(
+            `![${
               src.title
-            )}-${src.hex}?style=for-the-badge&logo=${encodeURIComponent(
-              src.title
-            )}&logoColor=white)](https://simpleicons.org/icons/${encodeURIComponent(
-              src.title
-            )})\n`;
+            }](https://img.shields.io/badge/${src.title.replaceAll(
+              "-",
+              "--"
+            )}-${
+              src.hex
+            }?style=for-the-badge&logo=${validation}&logoColor=white)\n`;
 
           inp.value = "";
         });
