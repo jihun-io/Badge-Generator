@@ -154,6 +154,14 @@ export default async function Generator() {
       e.preventDefault();
       autofill.firstChild.focus();
     }
+
+    if (e.key === "Enter") {
+      e.preventDefault();
+      if (autofill.firstChild === null) {
+        return;
+      }
+      autofill.firstChild.click();
+    }
   });
 
   const resultTag = document.querySelector("textarea#resultTag");
