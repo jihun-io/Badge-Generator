@@ -10,7 +10,6 @@ async function getData() {
     const res = await fetch(runtimeConfig.url);
     const data = await res.json();
 
-    console.log(res);
     return data;
   } catch (err) {
     console.error("error!", err);
