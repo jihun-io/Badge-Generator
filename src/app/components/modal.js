@@ -27,7 +27,7 @@ export default function Modal({ children }) {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="mt-4 px-4 py-2 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors"
+        className="mt-4 px-4 py-2 bg-elf-green-100 dark:bg-elf-green-600 rounded-md hover:bg-elf-green-200 dark:hover:bg-elf-green-700 transition-colors"
       >
         {children}
       </button>
@@ -48,7 +48,7 @@ export default function Modal({ children }) {
                 open
                 className={`w-[90vw] max-w-2xl my-4 p-6 flex flex-col gap-y-4 
                            shadow-md rounded-md bg-white z-50 
-                           transition-opacity duration-300
+                           transition-opacity duration-300 dark:bg-elf-green-950 dark:text-foreground
                            ${isVisible ? "opacity-100" : "opacity-0"}`}
               >
                 <p>
@@ -86,7 +86,7 @@ export default function Modal({ children }) {
                 </p>
                 <button
                   onClick={handleClose}
-                  className="mt-4 px-4 py-2 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors"
+                  className="mt-4 px-4 py-2 bg-elf-green-100 dark:bg-elf-green-600 rounded-md hover:bg-elf-green-200 dark:hover:bg-elf-green-700 transition-colors"
                 >
                   닫기
                 </button>

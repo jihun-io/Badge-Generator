@@ -2,21 +2,16 @@ import Image from "next/image";
 
 import Generator from "./components/generator";
 import Modal from "./components/modal";
+import Logo from "./components/logo";
 
 export default function Home() {
   return (
     <>
-      <header className="flex flex-wrap justify-between items-center text-xl text-center p-8 gap-2 bg-elf-green-100">
+      <header className="flex flex-wrap justify-between items-center text-xl text-center p-8 gap-2 bg-elf-green-100 dark:bg-elf-green-800 dark:text-elf-green-50">
         <h1>
-          <img
-            src="/images/logo.svg"
-            width={252}
-            height={60}
-            alt="badge.jihun.io"
-            className="w-[252px] h-[60px]"
-          />
+          <Logo />
         </h1>
-        <h2 className="font-bold text-elf-green-600 ml-auto">
+        <h2 className="font-bold text-elf-green-600 dark:text-elf-green-50 ml-auto">
           GitHub 배지 생성기
         </h2>
       </header>
@@ -31,7 +26,7 @@ export default function Home() {
                 type="text"
                 name="stack"
                 id="stack"
-                className="rounded-md border-[1px] border-elf-green-400 p-2 flex-grow focus:outline-elf-green-600"
+                className="rounded-md border-[1px] border-elf-green-400 p-2 flex-grow focus:outline-elf-green-600 bg-background"
                 placeholder="당신의 기술을 찾아보세요!"
               />
             </fieldset>
@@ -46,13 +41,13 @@ export default function Home() {
           <textarea
             name="resultTag"
             id="resultTag"
-            className="w-full h-32 border-[1px] rounded-md p-2 border-elf-green-400 focus:outline-elf-green-600"
+            className="w-full h-32 border-[1px] rounded-md p-2 border-elf-green-400 focus:outline-elf-green-600 bg-background"
           />
           <div className="copy-wrapper flex gap-x-2 items-center ml-auto">
             <p className="copy-msg hidden opacity-0 transition-opacity">
               복사되었습니다!
             </p>
-            <button className="copy px-4 py-2 border-[1px] border-elf-green-500 text-elf-green-500 hover:elf-green-600 hover:text-elf-green-600 rounded-lg">
+            <button className="copy px-4 py-2 border-[1px] border-elf-green-500 text-elf-green-500 hover:elf-green-600 hover:text-elf-green-600 rounded-lg bg-background transition-colors">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -73,7 +68,7 @@ export default function Home() {
         </section>
       </main>
       <Generator />
-      <footer className="text-center py-4 text-xs bg-elf-green-100">
+      <footer className="text-center py-4 text-xs bg-elf-green-100 dark:bg-elf-green-600">
         <p>Copyright © 2024 Jihun Kim. All rights reserved.</p>
       </footer>
     </>
