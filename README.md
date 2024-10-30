@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# GitHub README 배지 생성기
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=Nextdotjs&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=TailwindCSS&logoColor=white)
+![Cloudflare Pages](https://img.shields.io/badge/Cloudflare%20Pages-F38020?style=for-the-badge&logo=CloudflarePages&logoColor=white)
 
-## Getting Started
+<img width="960" alt="README 배지 생성기 페이지의 스크린샷" src="https://github.com/user-attachments/assets/6fe4e3c5-f811-4068-8285-6d3e5897020a">
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 링크
+[https://badge.jihun.io](https://badge.jihun.io)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 프로젝트 소개
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+GitHub README 문서를 꾸밀 때 배지를 다는 과정이 귀찮아서 만든 배지 생성기입니다.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 기능 설명
 
-## Learn More
+- 기술 검색 창에 검색어를 입력하면 [Simple Icons](https://simpleicons.org/)의 아이콘 목록 데이터를 파싱하여 검색 결과로 제공합니다.
+- 원하는 기술을 선택하면 해당하는 아이콘과 컬러를 바탕으로 [Shields.io](https://shields.io)의 API를 활용하여 배지 이미지로 만들어 줍니다.
+- 생성된 배지 이미지를 마우스 오른쪽 클릭으로 이미지로 저장하거나, 하단의 텍스트 박스에서 마크다운 문법을 복사하여 마크다운 문서에 붙여 넣을 수 있습니다.
 
-To learn more about Next.js, take a look at the following resources:
+## 알려진 문제
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Java의 아이콘이 Simple Icons에서 삭제되었기 때문에 Java 배지를 생성할 수 없습니다.
