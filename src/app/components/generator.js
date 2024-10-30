@@ -105,19 +105,31 @@ export default async function Generator() {
 
           const src = await generate(i, validation);
 
+          const tempLi = document.createElement("li");
+          tempLi.classList.add("cursor-pointer");
+
+          // 텍스트 색깔과 아이콘 색깔 동기화
+          tempLi.innerHTML = src.svg;
+          const textColor = tempLi.querySelector("text").attributes.fill.value;
+
+          const resultColor = () => {
+            if (textColor === "#fff") {
+              return "white";
+            } else {
+              return "black";
+            }
+          };
+
+          // 이미지 생성
           const img = document.createElement("img");
-          img.src = src.img;
-          const li = document.createElement("li");
-          li.classList.add("cursor-pointer");
-
-          // src.hex와 white 간의 대비가 4.5 미만일 경우 검은색으로 변경
-          const resultColor = adjustContrastWithWhite(src.hex);
-
-          const result = `![${
-            src.title
-          }](https://img.shields.io/badge/${src.title.replaceAll("-", "--")}-${
+          img.src = `https://img.shields.io/badge/${src.title.replaceAll(
+            "-",
+            "--"
+          )}-${
             src.hex
-          }?style=for-the-badge&logo=${validation}&logoColor=${resultColor})\n`;
+          }?style=for-the-badge&logo=${validation}&logoColor=${resultColor()}`;
+
+          const li = document.createElement("li");
 
           li.addEventListener("click", () => {
             resultUl.removeChild(li);
