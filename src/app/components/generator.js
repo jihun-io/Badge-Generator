@@ -11,7 +11,15 @@ async function generate(i, validation) {
         "--"
       )}-${data.hex}?style=for-the-badge&logo=${validation}&logoColor=white}`;
 
-      return { title: data.title, img: img, hex: data.hex };
+      const svg = await fetch(img);
+      const svgResult = await svg.text();
+
+      return {
+        title: data.title,
+        img: img,
+        hex: data.hex,
+        svg: svgResult,
+      };
     } else {
       console.error("error!", data);
     }
