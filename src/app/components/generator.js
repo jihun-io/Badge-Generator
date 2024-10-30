@@ -86,7 +86,6 @@ export default async function Generator() {
           const src = await generate(i, validation);
 
           const tempLi = document.createElement("li");
-          tempLi.classList.add("cursor-pointer");
 
           // 텍스트 색깔과 아이콘 색깔 동기화
           tempLi.innerHTML = src.svg;
@@ -110,6 +109,7 @@ export default async function Generator() {
           }?style=for-the-badge&logo=${validation}&logoColor=${resultColor()}`;
 
           const li = document.createElement("li");
+          li.classList.add("cursor-pointer");
 
           li.addEventListener("click", () => {
             resultUl.removeChild(li);
