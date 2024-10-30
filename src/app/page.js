@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import Generator from "./components/generator";
 import Modal from "./components/modal";
@@ -9,7 +10,9 @@ export default function Home() {
     <>
       <header className="flex flex-wrap justify-between items-center text-xl text-center p-8 gap-2 bg-elf-green-100 dark:bg-elf-green-800 dark:text-elf-green-50">
         <h1>
-          <Logo />
+          <Link href="/">
+            <Logo />
+          </Link>
         </h1>
         <h2 className="font-bold text-elf-green-600 dark:text-elf-green-50 ml-auto">
           GitHub 배지 생성기
