@@ -45,6 +45,7 @@ export default function Home() {
             name="resultTag"
             id="resultTag"
             className="w-full h-32 border-[1px] rounded-md p-2 border-elf-green-400 focus:outline-elf-green-600 bg-background"
+            placeholder="마크다운 문법이 여기에 생성됩니다"
           />
           <div className="copy-wrapper flex gap-x-2 items-center ml-auto">
             <p className="copy-msg hidden opacity-0 transition-opacity">
