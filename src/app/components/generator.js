@@ -1,31 +1,5 @@
 "use client";
 
-function adjustContrastWithWhite(srcHex) {
-  // HEX to RGB 변환
-  const hex = srcHex.replace(/^#/, "");
-  const r = parseInt(hex.slice(0, 2), 16);
-  const g = parseInt(hex.slice(2, 4), 16);
-  const b = parseInt(hex.slice(4, 6), 16);
-
-  // 상대 휘도 계산 (WCAG 공식)
-  const toLuminance = (c) => {
-    c = c / 255;
-    return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
-  };
-
-  const luminance =
-    0.2126 * toLuminance(r) + 0.7152 * toLuminance(g) + 0.0722 * toLuminance(b);
-
-  // 흰색의 휘도는 1
-  const whiteL = 1;
-
-  // 대비율 계산
-  const contrast = (whiteL + 0.05) / (luminance + 0.05);
-
-  // 대비가 2 미만이면 검은색 반환
-  return contrast < 2 ? "black" : "white";
-}
-
 async function generate(i, validation) {
   const result = await fetch(`/api/get-icons?icon=${encodeURIComponent(i)}`);
 
@@ -35,11 +9,7 @@ async function generate(i, validation) {
       const img = `https://img.shields.io/badge/${data.title.replaceAll(
         "-",
         "--"
-      )}-${
-        data.hex
-      }?style=for-the-badge&logo=${validation}&logoColor=${adjustContrastWithWhite(
-        data.hex
-      )}`;
+      )}-${data.hex}?style=for-the-badge&logo=${validation}&logoColor=white}`;
 
       return { title: data.title, img: img, hex: data.hex };
     } else {
