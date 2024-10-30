@@ -33,8 +33,8 @@ export default async function Generator() {
     return <></>;
   }
 
+  // 자동 완성 기능
   const inp = document.querySelector("input#stack");
-
   inp.addEventListener("input", async (e) => {
     const autofill = document.querySelector("div.autofill-wrapper ul");
     const resultUl = document.querySelector("ul.result");
@@ -47,6 +47,7 @@ export default async function Generator() {
       return;
     }
 
+    // 자동 완성 데이터 불러오기
     const result = await fetch(
       `/api/search-icons?q=${encodeURIComponent(e.target.value)}`
     );
@@ -71,6 +72,7 @@ export default async function Generator() {
           autofill.innerHTML = "";
           pholder.classList.remove("hidden");
 
+          // 특수 문자 치환
           const validation = i
             .replaceAll(" ", "")
             .replaceAll("-", "")
@@ -117,11 +119,14 @@ export default async function Generator() {
           li.appendChild(img);
           resultUl.appendChild(li);
 
+          // 마크다운 생성
+          const result = `![${src.title}](${img.src})\n`;
           resultTag.value = resultTag.value + result;
 
           inp.value = "";
         });
 
+        // 화살표 키로 선택 스크립트
         autofillLi.addEventListener("keydown", (e) => {
           if (e.key === "Enter") {
             autofillLi.click();
@@ -155,7 +160,6 @@ export default async function Generator() {
 
   inp.addEventListener("keydown", (e) => {
     const autofill = document.querySelector("div.autofill-wrapper ul");
-    const pholder = document.querySelector("div.autofill-wrapper p.pholder");
 
     if (e.key === "ArrowDown") {
       if (autofill.firstChild === null) {
@@ -174,12 +178,11 @@ export default async function Generator() {
     }
   });
 
-  const resultTag = document.querySelector("textarea#resultTag");
-
+  // 마크다운 복사 기능
   const copy = document.querySelector("button.copy");
-  const msg = document.querySelector("p.copy-msg");
-
   copy.addEventListener("click", () => {
+    const resultTag = document.querySelector("textarea#resultTag");
+    const msg = document.querySelector("p.copy-msg");
     if (resultTag.value === "") {
       return;
     }
