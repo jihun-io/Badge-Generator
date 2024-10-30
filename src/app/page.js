@@ -8,18 +8,20 @@ import Logo from "./components/logo";
 export default function Home() {
   return (
     <>
-      <header className="flex flex-wrap justify-between items-center text-xl text-center p-8 gap-2 bg-elf-green-100 dark:bg-elf-green-800 dark:text-elf-green-50">
-        <h1>
+      <header className="flex justify-center items-center text-xl text-center p-8 gap-2 bg-elf-green-100 dark:bg-elf-green-800 dark:text-elf-green-50">
+        <h1 className="w-full flex flex-wrap justify-between items-center">
           <Link href="/">
             <Logo />
-          </Link>
+          </Link>{" "}
+          <span className="sr-only">-</span>{" "}
+          <span className="font-bold text-elf-green-600 dark:text-elf-green-50 ml-auto">
+            GitHub 배지 생성기
+          </span>
         </h1>
-        <h2 className="font-bold text-elf-green-600 dark:text-elf-green-50 ml-auto">
-          GitHub 배지 생성기
-        </h2>
       </header>
       <main className="w-full p-8 flex flex-col items-center gap-4">
         <section className="w-full flex flex-col items-center gap-4">
+          <h2 className="sr-only">나의 배지 만들기</h2>
           <form className="w-full flex flex-col gap-4 relative">
             <fieldset className="flex gap-4">
               <label htmlFor="stack" className="sr-only">
