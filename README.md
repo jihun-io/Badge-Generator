@@ -4,7 +4,7 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=TailwindCSS&logoColor=white)
 ![Cloudflare Pages](https://img.shields.io/badge/Cloudflare%20Pages-F38020?style=for-the-badge&logo=CloudflarePages&logoColor=white)
 
-<img width="540" alt="badge.jihun.io 로고" src="https://github.com/user-attachments/assets/aa24e769-c296-4a63-ac86-c415d5496eee">
+<img width="540" alt="badge.jihun.io 로고" src="https://github.com/user-attachments/assets/6ebcab44-ce20-4fdb-95b9-38f42dc467e0">
 
 
 <img width="960" alt="README 배지 생성기 페이지의 스크린샷" src="https://github.com/user-attachments/assets/6fe4e3c5-f811-4068-8285-6d3e5897020a">
